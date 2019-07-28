@@ -1,8 +1,12 @@
 import java.io.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-//should be a Servlet
-public class Filter {
-	public static void main(String[] args) {
+public class Filter extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String temp;
 		
 		try {
