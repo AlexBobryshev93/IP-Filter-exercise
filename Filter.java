@@ -1,6 +1,5 @@
 import java.io.*;
 
-//should be a Servlet
 public class Filter {
 	public static void main(String[] args) {
 		String temp;

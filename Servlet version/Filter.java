@@ -8,15 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 public class Filter extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String temp;
-		
-		try {
-			if (args.length != 1) {
-				throw new RuntimeException();
-			}
-		} catch (RuntimeException exc) {
-			System.out.println("Error: wrong parameters! Usage: java -jar Filter.jar \"{IP-adress}\" ");
-			return;
-		}
 
 		try (BufferedReader fin = new BufferedReader(new FileReader("blacklist.txt"))) {
 			for (int i = 0; ; i++) {
